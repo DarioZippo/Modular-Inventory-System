@@ -8,6 +8,9 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Inventory{
+    /*
+        The "Controller" in the MVC pattern for inventory implemantation
+    */
     public class InventoryController : MonoBehaviour{
 
         [SerializeField]

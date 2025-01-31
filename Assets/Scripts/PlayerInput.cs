@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+/*
+    This class handles all input from the new input system, which other classes can access.
+*/
 public class PlayerInput : MonoBehaviour{
     [Header("Character Input Values")]
 	private Vector2 move;

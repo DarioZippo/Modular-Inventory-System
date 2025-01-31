@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+    A CharacterStatModifierSO example where we associate a bonus/malus for Character's Health
+*/
 [CreateAssetMenu]
 public class CharacterStatHealthModifierSO : CharacterStatModifierSO
 {

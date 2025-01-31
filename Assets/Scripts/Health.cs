@@ -17,7 +17,7 @@ public class Health : MonoBehaviour
             currentHealth = maxHealth;
         }
 
-        Messenger<int, int>.Broadcast(MessengerGameEvent.HEALTH_UPDATE, maxHealth, currentHealth, MessengerMode.REQUIRE_LISTENER);
+        Messenger<int, int>.Broadcast(MessengerGameEvent.HEALTH_UPDATE, maxHealth, currentHealth);
     }
 
     public void LoseHealth(int value){
@@ -26,6 +26,6 @@ public class Health : MonoBehaviour
             currentHealth = 0;
         }
 
-        Messenger<int, int>.Broadcast(MessengerGameEvent.HEALTH_UPDATE, maxHealth, currentHealth, MessengerMode.REQUIRE_LISTENER);
+        Messenger<int, int>.Broadcast(MessengerGameEvent.HEALTH_UPDATE, maxHealth, currentHealth);
     }
 }

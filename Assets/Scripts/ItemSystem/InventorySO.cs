@@ -6,6 +6,9 @@ using UnityEngine;
 
 namespace Inventory.Model
 {
+    /*
+        The "Model" in the MVC pattern for inventory implemantation
+    */
     [CreateAssetMenu]
     public class InventorySO : ScriptableObject
     {
@@ -172,6 +175,9 @@ namespace Inventory.Model
         }
     }
 
+    /*
+        The class for inventory's item management.
+    */
     [Serializable]
     public struct InventoryItem
     {

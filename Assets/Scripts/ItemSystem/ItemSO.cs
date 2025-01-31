@@ -26,6 +26,7 @@ namespace Inventory.Model
         [field: SerializeField]
         public Sprite ItemImage { get; set; }
 
+        //A list of parameters with editable values and names
         [field: SerializeField]
         public List<ItemParameter> DefaultParametersList { get; set; }
 

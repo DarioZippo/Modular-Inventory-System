@@ -4,6 +4,9 @@ using UnityEngine.UI;
 
 namespace Inventory.UI
 {
+    /*
+        This is the context menu when you right-click on an itemUI
+    */
     public class ItemActionPanel : MonoBehaviour
     {
         [SerializeField]

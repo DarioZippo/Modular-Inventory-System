@@ -8,6 +8,7 @@ namespace Inventory.Model
     [CreateAssetMenu]
     public class UsableItemSO : ItemSO, IItemAction
     {
+        //A list of modifiers that triggers an effect "on consume" of the associated item.
         [SerializeField]
         private List<ModifierData> modifiersData = new List<ModifierData>();
 

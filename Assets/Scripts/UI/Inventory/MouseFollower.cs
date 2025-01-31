@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+    The cointainer for Item dragging
+*/
 public class MouseFollower : MonoBehaviour
 {
     [SerializeField]

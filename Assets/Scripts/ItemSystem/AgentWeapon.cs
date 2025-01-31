@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+    The weapon holder class to manage equipped items
+*/
 public class AgentWeapon : MonoBehaviour
 {
     [SerializeField]
