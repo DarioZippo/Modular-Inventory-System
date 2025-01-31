@@ -211,28 +211,25 @@ namespace Inventory{
             return sb.ToString();
         }
 
-        public void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.I))
-            {
-                if (inventoryUI.isActiveAndEnabled == false)
+        public void TriggerUI(){
+            if (inventoryUI.isActiveAndEnabled == false){
+                inventoryUI.Show();
+                foreach (var item in inventoryData.GetCurrentInventoryState())
                 {
-                    inventoryUI.Show();
-                    foreach (var item in inventoryData.GetCurrentInventoryState())
-                    {
-                        inventoryUI.UpdateData(item.Key,
-                            item.Value.item.ItemImage,
-                            item.Value.quantity);
-                    }
-                }
-                else
-                {
-                    inventoryUI.Hide();
+                    inventoryUI.UpdateData(item.Key,
+                        item.Value.item.ItemImage,
+                        item.Value.quantity);
                 }
 
+                Messenger.Broadcast(MessengerGameEvent.STOP_TIME);
+            }
+            else{
+                inventoryUI.Hide();
+
+                Messenger.Broadcast(MessengerGameEvent.START_TIME);
             }
         }
-    
+
         public InventorySO GetInventoryData(){
             return inventoryData;
         }

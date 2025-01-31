@@ -12,7 +12,9 @@ public class PickUpItem : Item{
 
     private IEnumerator AnimateItemPickup()
     {
-        //audioSource.Play();
+        if(audioSource)
+            audioSource.Play();
+            
         Vector3 startScale = transform.localScale;
         Vector3 endScale = Vector3.zero;
         float currentTime = 0;
